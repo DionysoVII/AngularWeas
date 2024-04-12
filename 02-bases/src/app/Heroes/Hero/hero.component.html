@@ -1,0 +1,25 @@
+<h1>SuperHero</h1>
+
+<dl>
+  <td>Nombre: </td>
+  <dd>{{Name}}</dd>
+
+  <td>Edad: </td>
+  <dd> {{Age}} </dd>
+
+  <td>Metodo: </td>
+  <dd> {{getHeroDescription()}} </dd>
+
+  <td>Capitalizado: </td>
+  <dd> {{capitalizeName}} </dd>
+
+</dl>
+
+<button class="btn btn-primary mx-2" (click)="ChangeHero()">Cambiar nombre</button>
+<input type="text" [(ngModel)]="NewName" placeholder="Nuevo Nombre">
+
+<button class="btn btn-primary mx-2" (click)="cambiarEdad()">Cambiar Edad</button>
+<input type="number" [(ngModel)]="NewAge" placeholder="Nueva Edad">
+
+<button class="btn btn-primary mx-2" *ngIf=" Name !== 'Spiderman' " (click)="SetSpiderman()">SpiderMan</button>
+<button class="btn btn-primary mx-2" *ngIf=" Name !== 'IronMan' " (click)="SetIronman()">IronMan</button>
